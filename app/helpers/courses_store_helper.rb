@@ -1,0 +1,2 @@
+module CoursesStoreHelper
+end

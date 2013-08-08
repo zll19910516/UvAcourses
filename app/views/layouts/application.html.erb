@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UvA Courses Store</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller.controller_name %>">
+	<div id="banner">
+		<%= image_tag("logo.png")%>
+		<%= @page_title || "UvA Courses Store"%>
+	</div>
+	<div id="columns">
+		<div id="side">
+				<%= form_tag "/courses_store/result", method: 'get' do%>
+					<%= text_field_tag 'info', params[:info], size:25, class: 'form_input' %>
+					<%= select_tag "type", options_for_select(["sgid", "title", "descriptions", "staff"], params[:type]), prompt: '...', class: 'form_input'%>
+					<div id="submit">
+						<%= submit_tag "Search", class: "form_input", remote: true%>
+					</div>
+				<% end%>
+				<br/>
+				
+				<% if @cart%>
+					<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+						<%= render @cart %>
+					<% end %>
+				<% end %>
+				
+				<div id = "cookies">
+					<%if @views%>
+						<div class = "cookies_title">Recent Viewed</div>
+							<% for course in @views %>
+								<%=truncate(strip_tags(sanitize(course.name)), length: 33)%>
+								[<%= course.sgid%>]
+								<br/>
+							<% end %>
+					<% end %>
+				</div>
+		</div>
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
+</body>
+</html>

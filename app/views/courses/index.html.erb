@@ -1,0 +1,51 @@
+<h1>Listing courses</h1>
+
+<table>
+  <tr>
+    <th>Acode</th>
+    <th>Code</th>
+    <th>Sgid</th>
+    <th>Name</th>
+    <th>Ects</th>
+    <th>Year</th>
+    <th>Period</th>
+    <th>Institute</th>
+    <th>Description</th>
+    <th>Timetable</th>
+    <th>Lecture material</th>
+    <th>Goals</th>
+    <th>Participant count</th>
+    <th>Specialities</th>
+    <th>Examination</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @courses.each do |course| %>
+  <tr>
+    <td><%= course.acode %></td>
+    <td><%= course.code %></td>
+    <td><%= course.sgid %></td>
+    <td><%= course.name %></td>
+    <td><%= course.ects %></td>
+    <td><%= course.year %></td>
+    <td><%= course.period %></td>
+    <td><%= course.institute %></td>
+    <td><%= course.description %></td>
+    <td><%= course.timetable %></td>
+    <td><%= course.lecture_material %></td>
+    <td><%= course.goals %></td>
+    <td><%= course.participant_count %></td>
+    <td><%= course.specialities %></td>
+    <td><%= course.examination %></td>
+    <td><%= link_to 'Show', course %></td>
+    <td><%= link_to 'Edit', edit_course_path(course) %></td>
+    <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Course', new_course_path %>

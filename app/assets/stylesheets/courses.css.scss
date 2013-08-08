@@ -1,0 +1,138 @@
+// Place all the styles related to the Courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#banner {
+  background: #BDE4F8;
+  padding: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #1173A0;
+  text-align: center;
+
+	img {
+		float: left;
+	}
+}
+
+
+#notice{
+	border: 2px solid red;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #f0f0f0;
+	font: bold smaller sans-serif;
+}
+
+#columns {
+  background: #0B4967;
+
+	#main {	
+		margin-left: 23em;
+		padding-top: 2ex;		
+		padding-left: 2em;
+		background: white;
+	}
+
+	#side {
+		float: left;
+		padding-top: 1em;
+		padding-left: 1em;
+		padding-bottom: 1em;
+		width: 22em;
+		background: #0B4967;
+		
+		.form_input{
+			font:  90% sans-serif;
+			
+		}
+		
+		#submit{
+			margin-top: 1em;
+			margin-left: 15em;
+		}
+
+	  a{
+		color: #C6E9F9;
+		font-size: small;
+		}
+
+
+
+		#cart{
+			margin-top: 2em;
+			font-size: smaller;
+			color: white;
+
+			.cart_title {
+				margin-left: 8em;
+				font: 140% bold;
+				margin-bottom: 5px;
+			}
+
+			table{
+				font-size: smaller;
+				color: white;
+				border-top: 2px dotted #BDE4F8;
+				border-bottom: 2px dotted #BDE4F8;
+				margin-bottom: 10px;
+			}
+			
+		}
+		
+		#cookies{
+			margin-top: 7em;
+			font-size: smaller;
+			color: white;
+
+			.cookies_title {
+				font: 130% bold;
+				margin-bottom: 5px;
+				border-bottom: 1px dotted #BDE4F8;
+			}
+
+			.clear{
+				margin-top: 5px;
+			}
+			
+		}
+	}
+}
+
+#courses_store .entry form, #courses_store .entry form div{
+	display: inline;
+}
+
+.order_form {
+  fieldset {
+    background: #EEF3FB;
+    legend {
+      color: #dfd;
+      background: #0B4967;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+    }
+  }
+
+  form {
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+
+    .submit {
+      margin-left: 4em;
+    }
+
+    br {
+      display: none
+    }
+  }
+}

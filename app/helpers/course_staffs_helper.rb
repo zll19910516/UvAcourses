@@ -1,0 +1,2 @@
+module CourseStaffsHelper
+end

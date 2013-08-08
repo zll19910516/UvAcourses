@@ -1,0 +1,55 @@
+<div class="buttons">
+	<% 
+	   con = "courses_store"
+	   if @info
+		url = "result"
+	   elsif @cart_id
+		con= "line_items"
+	   else 
+		   url = "index"
+	   end
+	%>
+	<%= link_to 'Back', controller: con, action: url, page: @page_now, info: @info, type: @type, cart_id: @cart_id %>&nbsp; &nbsp; &nbsp; &nbsp; 
+	<%= button_to 'Add to Cart', line_items_path(course_sgid: @course.sgid), remote: true%>
+</div>
+<div class="entry">
+	<h3><%=@course.name%>&nbsp;[<%=@course.sgid%>]&nbsp;&nbsp;<%= @course.ects%> ects</h3>
+	<h4><%=h @course.institute%></h4>
+	<div class="description">
+		<%= sanitize(@course.description)%>
+	</div>
+	
+	<div class="other">	Programmes:<br/></div>
+	<% @course.programmes.each do |programme| %>
+		&nbsp; &nbsp; <a href="<%=programme.url%>"><%=programme.name %></a>
+	<% end %>
+	
+	<div class="other">	Year:</div>
+	&nbsp; &nbsp; <%=@course.year%>
+	
+	<div class="other">	Period:</div>
+	&nbsp; &nbsp; <%=@course.period%>
+		
+	<div class="other">	Staff:</div>
+	<% @course.staffs.each do |staff| %>
+		&nbsp; &nbsp;<a href="<%=staff.url%>"><%=staff.name %></a>
+	<% end %>	
+	
+	<div class="other">	Timetable:</div>
+	&nbsp; &nbsp; <%=sanitize(@course.timetable)%>	
+	
+	<div class="other">	Lecture_material:</div>
+	&nbsp; &nbsp; <%=sanitize(@course.lecture_material)%>
+	
+	<div class="other">	Goals:</div>
+	&nbsp; &nbsp; <%=sanitize(@course.goals)%>
+	
+	<div class="other">	Specialities:</div>
+	&nbsp; &nbsp; <%=sanitize(@course.specialities)%>
+	
+	<div class="other">	Examination:</div>
+	&nbsp; &nbsp; <%=sanitize(@course.examination)%>
+	
+	<div class="participant"><%=sanitize(@course.participant_count)%></div>
+</div>
+

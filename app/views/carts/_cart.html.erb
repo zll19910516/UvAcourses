@@ -1,0 +1,17 @@
+<div class="cart_title">Your Cart</div>
+<table>
+	<tr>
+		<td align="center">Course</td>
+		<td align="center">Sgid</td>
+	</tr>
+	<%= render(cart.line_items) %>
+</table>
+
+<div class="buttons">
+	<%= link_to "Detail...", controller: "line_items", action: "index", cart_id: cart.id%>
+	<div class = "checkout">
+		<%= button_to 'Empty cart', cart, method: :delete,
+			confirm: 'Are you sure?', remote: true %>
+		<%= button_to 'Checkout', new_order_path, method: :get%>
+	</div>
+</div>

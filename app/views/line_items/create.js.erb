@@ -1,0 +1,7 @@
+$("#notice").hide();
+
+//商品大于1时，显示购物车
+if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
+
+//显示局部页面
+$('#cart').html("<%=j render @cart %>");

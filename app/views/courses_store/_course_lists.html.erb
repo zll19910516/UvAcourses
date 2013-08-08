@@ -1,0 +1,35 @@
+<% if notice%>
+<p id="notice"><%= notice%></p>
+<% end %>
+
+<h1>UvA Courses Catalog</h1>
+<% @courses.each do |course| %>
+	<div class="entry">
+		<h3><%= link_to "#{course.name}", action: "show", course_sgid: course.sgid, page_now: @page_now, info: @info, type: @type %>&nbsp;[<%=course.sgid%>]</h3>
+		<h4><%=h course.institute%></h4>
+		<div class="description">
+			<%= truncate(strip_tags(sanitize(course.description)), length: 500)%>
+			<%= link_to "[more...]", action: "show", course_sgid: course.sgid, page_now: @page_now, info: @info, type: @type %>
+		</div>
+		
+		<div class="other">	Programmes:<br/></div>
+			<% course.programmes.each do |programme| %>
+			&nbsp; &nbsp; <%=programme.name %><br/>
+			<% end %>
+		
+		<div class="other">	Staff:</div>
+			<% course.staffs.each do |staff| %>
+				&nbsp; &nbsp;<a href="<%=staff.url%>"><%=staff.name %></a>
+			<% end %>
+		
+		
+		<div class="participant"><%=sanitize(course.participant_count)%></div>
+		<div class="other_line">
+			<div class="ects"><%= course.ects%> ects&nbsp;			
+			</div>	
+			<%= button_to 'Add to Cart', line_items_path(course_sgid: course.sgid), remote: true%>
+		</div>
+	</div>
+<% end %>
+
+<div class="paginate"><%= will_paginate @courses %></div>

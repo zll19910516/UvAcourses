@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  acode: MyString
+  code: MyString
+  sgid: MyString
+  name: MyString
+  ects: 1
+  year: MyString
+  period: MyString
+  institute: MyString
+  description: MyText
+  timetable: MyText
+  lecture_material: MyText
+  goals: MyText
+  participant_count: MyText
+  specialities: MyText
+  examination: MyText
+
+two:
+  acode: MyString
+  code: MyString
+  sgid: MyString
+  name: MyString
+  ects: 1
+  year: MyString
+  period: MyString
+  institute: MyString
+  description: MyText
+  timetable: MyText
+  lecture_material: MyText
+  goals: MyText
+  participant_count: MyText
+  specialities: MyText
+  examination: MyText

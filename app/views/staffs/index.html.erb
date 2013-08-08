@@ -1,0 +1,27 @@
+<h1>Listing staffs</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @staffs.each do |staff| %>
+  <tr>
+    <td><%= staff.id %></td>
+    <td><%= staff.name %></td>
+    <td><%= staff.url %></td>
+    <td><%= link_to 'Show', staff %></td>
+    <td><%= link_to 'Edit', edit_staff_path(staff) %></td>
+    <td><%= link_to 'Destroy', staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Staff', new_staff_path %>
