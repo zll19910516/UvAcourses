@@ -1,0 +1,65 @@
+<courses>
+    <course acode="SCH" code="4HIMS15" sgid="5254CAFE6Y">
+        <name>Chemical Analysis for Forensic Evidence (CAFE) </name>
+        <ects>
+            6
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 1 block 2, voertaal English
+        </period>
+        <institute>
+            Masters School of Sciences
+        </institute>
+        <staff_list>
+            <staff id="7079">
+                <name> prof.dr.ir. J.G.M. Janssen </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/7079.html </url>
+            </staff>
+            <staff id="831">
+                <name> prof.dr.ir. P.J. Schoenmakers </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/831.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="25">
+                <name> Master's in Chemistry, track Analytical Sciences </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/25.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;Analytical chemistry is a pervasive science in the forensic field. Many different types of forensic samples are subjected to chemical analysis. The types of samples, sample handling and sample preparation are briefly discussed. Analytical methods are described in two different ways. A technical perspective is offered for those students that are not yet familiar with forensic science. An example-driven forensic perspective is used to illustrate the application of a variety of methods in practice. The possibilities and limitations of analytical methods are discussed. Attention will be paid to special requirements of chemical analysis in a forensic context (quality, traceability, contamination. An important aspect of the course is a meaningful interpretation of the data, based on (Bayesian) statistics. The ultimate objective is to translate analytical data into solid evidence.&lt;/p&gt;
+
+        </description>
+        <timetable>
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Class handouts will be augmented by a number of (review) articles.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;At the end of the course the student must be able to&lt;/p&gt;
+            &lt;ul class="bullets-outside"&gt;
+            &lt;li&gt;explain the essence of analytical methods, sampling and sample-preparation techniques used in forensic science; &lt;/li&gt;
+            &lt;li&gt;describe the possibilities and limitations of these methods;&lt;/li&gt;
+            &lt;li&gt;select appropriate analytical and sample-preparation methods for specific forensic questions;&lt;/li&gt;
+            &lt;li&gt;explain the special (quality) requirements for sample-handling and measurements in forensic analytical chemistry;&lt;/li&gt;
+            &lt;li&gt;interpret analytical data using forensic statistics.&lt;/li&gt;
+            &lt;/ul&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;The course has an open-book exam in which the student’s understanding of the subject is addressed.  Interpretation skills will be assessed by computer-based exercises.&lt;/p&gt;
+
+        </examination>
+    </course>
+</courses>
